@@ -616,3 +616,30 @@ body {
   flex-direction: row;
   position: relative;
 }
+
+.scroll-section {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-section:nth-child(1) {
+  background-color: #0aa1ff;
+}
+
+.scroll-section:nth-child(2) {
+  background-color: #ff0a0a;
+}
+
+.scroll-section:nth-child(3) {
+  background-color: #ff0a0a;
+}
+
+.h3 {
+  font-size: 60px;
+  color: var(--primaryTextColor);
+  font-weight: 700;
+  background-color: yellowgreen;
+}
