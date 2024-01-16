@@ -605,11 +605,11 @@ body {
   color: var(--primaryColor)
 }
 
-.scroll-trigger-outer {
+.scroll-section-outer {
   overflow: hidden;
 }
 
-.scroll-trigger-inner {
+.scroll-section-inner {
   height: 100vh;
   width: 400vw;
   display: flex;
@@ -634,7 +634,11 @@ body {
 }
 
 .scroll-section:nth-child(3) {
-  background-color: #ff0a0a;
+  background-color: #0affa0;
+}
+
+.scroll-section:nth-child(4) {
+  background-color: #a00aff;
 }
 
 .h3 {
