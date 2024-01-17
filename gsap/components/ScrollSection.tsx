@@ -3,7 +3,7 @@
  import gsap from 'gsap'
  import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-  type Props = {}
+  // type Props = {}
 
  const ScrollSection = () => {
 
@@ -13,6 +13,7 @@
    gsap.registerPlugin(ScrollTrigger);
 
    useEffect(() => {
+
      const pin = gsap.fromTo(sectionRef.current, {
        translateX: 0,
      }, {
@@ -38,16 +39,16 @@
          <div ref={triggerRef}>
            <div ref={sectionRef} className='scroll-section-inner'>
              <div className='scroll-section'>
-               <h3 className='h3'>Section 1</h3>
+               <h3>Section 1</h3>
              </div>
              <div className='scroll-section'>
-             <h3 className='h3'>Section 2</h3>
+             <h3>Section 2</h3>
              </div>
              <div className='scroll-section'>
-             <h3 className='h3'>Section 3</h3>
+             <h3>Section 3</h3>
              </div>
              <div className='scroll-section'>
-             <h3 className='h3'>Section 4</h3>
+             <h3>Section 4</h3>
              </div>
            </div>
          </div>
@@ -56,48 +57,3 @@
  }
 
 export default ScrollSection;
-
-// import React, { useRef, useEffect } from 'react'
-// import gsap from 'gsap'
-// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const ScrollSection = () => {
-//   const sectionRef = useRef(null);
-
-//   useEffect(() => {
-//     gsap.fromTo(sectionRef.current?.children ?? [], {
-//       x: '100%',
-//     }, {
-//       x: '-100%',
-//       ease: 'none',
-//       scrollTrigger: {
-//         trigger: sectionRef.current,
-//         start: 'top top',
-//         end: () => "+=" + sectionRef.current?.offsetWidth ?? [],
-//         scrub: true,
-//         pin: true,
-//       }
-//     })
-//   }, [])
-
-//   return (
-//     <section ref={sectionRef} className='scroll-section-outer'>
-//       <div className='scroll-section'>
-//         <h3 className='h3'>Section 1</h3>
-//       </div>
-//       <div className='scroll-section'>
-//         <h3 className='h3'>Section 2</h3>
-//       </div>
-//       <div className='scroll-section'>
-//         <h3 className='h3'>Section 3</h3>
-//       </div>
-//       <div className='scroll-section'>
-//         <h3 className='h3'>Section 4</h3>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default ScrollSection;
